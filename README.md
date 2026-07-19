@@ -9,3 +9,11 @@ This opens the agent plan in a nicely designed HTML page with Graphs for better 
 ```sh
 npx skills add https://github.com/saeedvaziry/skills/tree/main/skills/plan-presenter
 ```
+
+## Design Proposal
+
+A design proposal in HTML before finalizing and proceeding
+
+```sh
+npx skills add https://github.com/saeedvaziry/skills/tree/main/skills/design-proposal
+```
