@@ -25,3 +25,11 @@ Build the given task with a review gate
 ```sh
 npx skills add https://github.com/saeedvaziry/skills/tree/main/skills/build
 ```
+
+## Code Review (BETA)
+
+Review the implemented changes
+
+```sh
+npx skills add https://github.com/saeedvaziry/skills/tree/main/skills/code-review
+```
