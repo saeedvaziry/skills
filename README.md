@@ -17,3 +17,11 @@ A design proposal in HTML before finalizing and proceeding
 ```sh
 npx skills add https://github.com/saeedvaziry/skills/tree/main/skills/design-proposal
 ```
+
+## Build (BETA)
+
+Build the given task with a review gate
+
+```sh
+npx skills add https://github.com/saeedvaziry/skills/tree/main/skills/build
+```
