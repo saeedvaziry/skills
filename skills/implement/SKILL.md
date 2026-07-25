@@ -12,6 +12,13 @@ description: Implement the user-asked feature or bugfix.
 - Refine the given task by interviewing the user to not leave any gaps and clarify everything
 - Finalize the acceptance criteria
 
+## Plan
+
+- Plan the implementation based on the refinement
+- Present the plan to the user. Use plan-presenter skill if available. If not, Use readable markdown.
+- Go to implementation if user confirms the plan.
+- If user needs changes, Start from Refinement again and this time consider user's feedback on the plan.
+
 ## Implementation
 
 - Start editing the code to achieve the acceptance criteria
