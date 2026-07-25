@@ -48,4 +48,10 @@ Share with user steps to test the implementation visually
 
 ## User Feedback
 
-If user shares feedbacks of bugs or issues with the implementation, Repeat the entire flow from top.
+If user shares feedbacks of bugs or issues with the implementation you have few options to continue based on the feedback and your judgment:
+
+- Fix it right away
+- Fix and review and review fixer
+- Restart the entire flow from top
+
+This is fully depending on your judgment based on the feedback.
