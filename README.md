@@ -18,17 +18,17 @@ A design proposal in HTML before finalizing and proceeding
 npx skills add https://github.com/saeedvaziry/skills/tree/main/skills/design-proposal
 ```
 
-## Build (BETA)
+## Implement (BETA)
 
-Build the given task with a review gate
+Implement the given task with a review gate
 
 ```sh
-npx skills add https://github.com/saeedvaziry/skills/tree/main/skills/build
+npx skills add https://github.com/saeedvaziry/skills/tree/main/skills/implement
 ```
 
 ## Code Review (BETA)
 
-Review the implemented changes
+Review the implemented changes inspired from https://github.com/mattpocock/skills
 
 ```sh
 npx skills add https://github.com/saeedvaziry/skills/tree/main/skills/code-review
