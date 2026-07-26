@@ -2,7 +2,7 @@
 
 I am putting all the skills I make or use here
 
-Most of the skills are inspired from https://github.com/mattpocock/skills
+Most of the skills are inspired by https://github.com/mattpocock/skills
 
 ## Plan Presenter
 
