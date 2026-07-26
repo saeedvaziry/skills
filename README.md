@@ -2,6 +2,8 @@
 
 I am putting all the skills I make or use here
 
+Most of the skills are inspired from https://github.com/mattpocock/skills
+
 ## Plan Presenter
 
 This opens the agent plan in a nicely designed HTML page with Graphs for better understanding
@@ -28,7 +30,7 @@ npx skills add https://github.com/saeedvaziry/skills/tree/main/skills/implement
 
 ## Code Review (BETA)
 
-Review the implemented changes inspired from https://github.com/mattpocock/skills
+Review the implemented changes
 
 ```sh
 npx skills add https://github.com/saeedvaziry/skills/tree/main/skills/code-review
