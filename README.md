@@ -33,3 +33,11 @@ Review the implemented changes inspired from https://github.com/mattpocock/skill
 ```sh
 npx skills add https://github.com/saeedvaziry/skills/tree/main/skills/code-review
 ```
+
+## Check codex context remaining
+
+This is a skill helping codex cli to know how much of the context window remaining. It can be useful for autonomous workflows to keep the model in the smart zone.
+
+```sh
+npx skills add https://github.com/saeedvaziry/skills/tree/main/skills/check-codex-context-remaining
+```
