@@ -1,57 +1,52 @@
 ---
 name: implement
-description: Implement the user-asked feature or bugfix.
+description: Implement a user-requested feature or bugfix, including tests, exhaustive diff review, verified fixes, and a bounded completion decision.
 ---
 
 # Implement
 
-## Refinement
+## Define
 
-- Read the provided context fully to understand the task
-- Read the codebase to understand how it works 
-- Refine the given task by interviewing the user to not leave any gaps and clarify everything
-- Finalize the acceptance criteria
+- Read the provided context, repository instructions, and relevant code.
+- Clarify only gaps that materially affect the result.
+- Agree on acceptance criteria, out-of-scope work, and the exact diff base.
 
 ## Plan
 
-- Plan the implementation based on the refinement
-- Present the plan to the user. Use plan-presenter skill if available. If not, Use readable markdown.
-- Go to implementation if user confirms the plan.
-- If user needs changes, Start from Refinement again and this time consider user's feedback on the plan.
+- Make a proportional implementation plan.
+- For substantial work, present it with `plan-presenter` when available and wait for approval.
 
-## Implementation
+## Build
 
-- Start editing the code to achieve the acceptance criteria
-- Follow the standards of the codebase
-- Write tests to cover the implementation but don't overtest
-- Use as less code possible to implement
-- Avoid writing large files
-- Write smaller and re-usable code blocks
+- Implement the smallest coherent change that satisfies the acceptance criteria and repository standards.
+- Add focused tests without unrelated refactoring.
+- Run the relevant tests, lint, type checks, and build before review.
 
-## Review
+## Discovery review
 
-- Spawn a sub-agent to independently review your implementation.
-- You are a good developer but you are the worst code reviewer
-- Don't pass your opinions to the reviewer sub-agent
-- Run the review only one round. Do not loop.
-- The reviewer must return PASS or CHANGES NEEDED with what to change.
+Freeze the exact review diff and independently inventory its files, hunks, additions, and deletions. Spawn one independent reviewer with that snapshot, the acceptance criteria, and repository standards; do not give it your conclusions.
 
-## Review Fixer
+The reviewer must:
 
-- Spawn a sub-agent to pass the findings of the reviewer to fix them.
-- Do not share your opinions to the fixer agent.
-- Fixer agent should first verify the findings and then fix the ncessary ones.
+- Inspect every added, changed, and deleted line, including tests, configuration, migrations, and generated files. Read enough surrounding code and call sites to judge each line.
+- Keep a file-and-hunk coverage checklist. Inspect file by file or in smaller batches so output cannot hide lines through truncation.
+- Report a finding only when it has a concrete failure scenario and is caused by the diff. A blocker is an evidenced acceptance, correctness, security, data-loss, compatibility, or required-standard violation. Preferences, speculative hardening, unrelated debt, and optional refactors are non-blocking advisories.
+- Cite `file:line`, severity, violated criterion or invariant, evidence, and the smallest valid fix for every finding.
+- Return `PASS` or `CHANGES NEEDED`, followed by blockers, advisories, and coverage totals: files, hunks, additions, deletions, and any uncovered item.
 
-## Finalize
+Compare its coverage to the independent inventory and review any missing batches. Do not accept uncovered lines. Run exactly one discovery review.
 
-Share with user steps to test the implementation visually
+## Fix and verify
 
-## User Feedback
+- If the review passes, do not spawn a fixer.
+- Give verified blockers—not advisories—to an independent fixer. The fixer must validate each finding, make minimal fixes, and record fixed, rejected-with-reason, and unresolved items.
+- Rerun the relevant checks.
+- Freeze a new candidate snapshot, then run targeted verification against the blocker ledger and every line changed from the last reviewed snapshot. It may add a blocker only for a fix regression or an obvious release-critical defect in that scope.
+- If verification fails, allow one final fix and targeted verification. If blockers remain, stop and report them without editing again.
+- Never start another discovery review for the same implementation.
 
-If user shares feedbacks of bugs or issues with the implementation you have few options to continue based on the feedback and your judgment:
+## Finish
 
-- Fix it right away
-- Fix and review and review fixer
-- Restart the entire flow from top
+Finish when acceptance criteria and checks pass, all blockers are resolved or explicitly accepted by the user, and review coverage is complete. Advisories do not prevent completion.
 
-This is fully depending on your judgment based on the feedback.
+Report the changed behavior, checks run, review disposition, residual risks, and practical test steps.
