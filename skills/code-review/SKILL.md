@@ -22,15 +22,16 @@ Review one immutable diff against:
 - Inspect every added, changed, and deleted line in every file, including tests, docs, configuration, migrations, lock/generated files, renames, and binaries. Read surrounding code and call sites where needed.
 - Maintain a file-and-hunk checklist against the inventory. Inspect file by file or in smaller batches so output cannot hide lines through truncation. Do not finish with an unchecked line or hunk.
 - Report only issues introduced by the diff. A blocker requires evidence of an acceptance, correctness, security, data-loss, compatibility, or explicit required-standard violation. Style preferences, generic code smells, speculative hardening, optional refactors, and unrelated debt are non-blocking advisories.
-- For every finding, provide severity, `file:line`, the violated spec/rule or invariant, a concrete failure scenario, evidence, and the smallest valid fix. Do not report vague possibilities.
+- For findings, provide severity, `file:line`, the violated spec/rule or invariant, a concrete failure scenario, evidence, and the smallest valid fix. Do not report vague possibilities.
 - Return `PASS` or `CHANGES NEEDED`, then blockers, advisories, and coverage totals. `PASS` means zero blockers, not zero possible improvements.
 
 Compare both coverage reports with the inventory. If anything is missing, review only the missing batches before reporting; an incomplete review cannot pass.
 
 ## Report
 
-Present `## Standards` and `## Spec` separately. End with blocker and advisory counts per axis. Do not let advisories change a pass into failure.
+- Present `## Standards` and `## Spec` separately. End with blocker and advisory counts per axis. Do not let advisories change a pass into failure.
+- Also when presenting, each findings should have severity, High, Medium, Low and clarify which ones must be fixed before proceeding.
+- Recommend `FIX BEFORE PROCEEDING`, `CONSIDER FIXING`, or `PROCEED` from the evidenced severity, confidence, and risk, and name the findings that drive the recommendation. The review is read-only: the user decides whether to fix. Ask for that decision and do not edit or dispatch a fixer without explicit approval.
+- Do not report advisories unless user asks for them.
+- Provide a TL;DR section in the end in short in a table
 
-Also when presenting, each findings should have severity, High, Medium, Low and clarify which ones must be fixed before proceeding.
-
-Recommend `FIX BEFORE PROCEEDING`, `CONSIDER FIXING`, or `PROCEED` from the evidenced severity, confidence, and risk, and name the findings that drive the recommendation. The review is read-only: the user decides whether to fix. Ask for that decision and do not edit or dispatch a fixer without explicit approval.
