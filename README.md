@@ -4,6 +4,14 @@ I am putting all the skills I make or use here
 
 Most of the skills are inspired by https://github.com/mattpocock/skills
 
+## Super Plan
+
+Plan the specs in details and then attack to break it\
+
+```sh
+npx skills add https://github.com/saeedvaziry/skills/tree/main/skills/super-plan
+```
+
 ## Plan Presenter
 
 This opens the agent plan in a nicely designed HTML page with Graphs for better understanding
