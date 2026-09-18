@@ -16,6 +16,7 @@ Review one immutable diff against:
 2. Find the spec from commit references, a user-provided path, or matching files under `docs/`, `specs/`, or `.scratch/`. If none exists, mark the Spec axis unavailable.
 3. Find applicable repository instructions and standards such as `CLAUDE.md`, `AGENTS.md`, `CONTRIBUTING.md`, and `CODING_STANDARDS.md`.
 4. Inventory the complete diff: files, hunks, additions, deletions, renames, and binary files. Never rely on one possibly truncated diff output.
+5. Find the specs of the changes. what feature it delivers, or what issue it solves. Use PR summary or linked issues or user provided context. If not sure, Ask user before proceeding. Sometimes its possible to understand the spec from the code changes as well.
 
 ## Review
 
