@@ -44,6 +44,22 @@ Review the implemented changes
 npx skills add https://github.com/saeedvaziry/skills/tree/main/skills/code-review
 ```
 
+## Rewrite
+
+Rewrite software across languages, frameworks, and platforms with behavior checks, reviewed implementation, data migration, and cutover planning. Model and provider agnostic; supports both full and incremental rewrites.
+
+```sh
+npx skills add https://github.com/saeedvaziry/skills/tree/main/skills/rewrite
+```
+
+## Premium Product Video Maker
+
+Direct premium, Apple-style product videos: brand lock, storyboard, motion, music, and sound design, with After Effects briefs or AI video prompts.
+
+```sh
+npx skills add https://github.com/saeedvaziry/skills/tree/main/skills/premium-product-video-maker
+```
+
 ## Check codex context remaining
 
 This is a skill helping codex cli to know how much of the context window remaining. It can be useful for autonomous workflows to keep the model in the smart zone.
