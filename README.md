@@ -44,6 +44,14 @@ Review the implemented changes
 npx skills add https://github.com/saeedvaziry/skills/tree/main/skills/code-review
 ```
 
+## Lean Writing
+
+Write docs, plans, reports, summaries, PR descriptions and replies that are short, structured and free of filler. Diagrams and tables carry the content; every sentence has to earn its place.
+
+```sh
+npx skills add https://github.com/saeedvaziry/skills/tree/main/skills/lean-writing
+```
+
 ## Rewrite
 
 Rewrite software across languages, frameworks, and platforms with behavior checks, reviewed implementation, data migration, and cutover planning. Model and provider agnostic; supports both full and incremental rewrites.
